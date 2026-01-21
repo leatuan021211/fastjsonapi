@@ -1,0 +1,48 @@
+[
+    {
+        "field": "name",
+        "op": "ilike",
+        "val": "%john%"
+    },
+    {
+        "or": [
+            {
+                "and": [
+                    {
+                        "field": "age",
+                        "op": "gt",
+                        "val": 60
+                    },
+                    {
+                        "field": "age",
+                        "op": "lt",
+                        "val": 70
+                    }
+                ]
+            },
+            {
+                "and": [
+                    {
+                        "field": "age",
+                        "op": "eq",
+                        "val": 40
+                    },
+                    {
+                        "or": [
+                            {
+                                "field": "age",
+                                "op": "lt",
+                                "val": 10
+                            },
+                            {
+                                "field": "age",
+                                "op": "gt",
+                                "val": 30
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
